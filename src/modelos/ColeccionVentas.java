@@ -39,8 +39,12 @@ public class ColeccionVentas {
         }
         return false;
     }
-    
-    public int subTotal(int indice){
-        return base.get(indice).getCantidad()*base.get(indice).getPrecio();
+
+    public int subTotal() {
+        int subTotal = 0;
+        for (int i = 0; i < this.base.size(); i++) {
+            subTotal += base.get(i).getCantidad() * base.get(i).getPrecio();
+        }
+        return subTotal;
     }
 }
