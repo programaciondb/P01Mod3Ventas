@@ -40,10 +40,10 @@ public class ColeccionVentas {
         return false;
     }
 
-    public int subTotal(Venta venta) {
+    public int subTotal(String codigoVenta) {
         int indice = 0;
         for (int i = 0; i < this.base.size(); i++) {
-            if (this.base.get(i).getCodigo().equals(venta.getCodigo())) {
+            if (this.base.get(i).getCodigo().equals(codigoVenta)) {
                 indice = i;
             }
         }

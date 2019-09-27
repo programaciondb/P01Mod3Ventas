@@ -22,7 +22,7 @@ public class TestsubTotal {
         Venta venta = new Venta("Venta001", 9500, 3);
         ColeccionVentas instance = new ColeccionVentas();
         instance.Agregar(venta);
-        assertTrue(instance.subTotal(venta) == 28500);
+        assertTrue(instance.subTotal(venta.getCodigo()) == 28500);
     }
     
 }
