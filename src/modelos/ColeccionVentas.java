@@ -40,7 +40,13 @@ public class ColeccionVentas {
         return false;
     }
 
-    public int subTotal(int indice) {
+    public int subTotal(Venta venta) {
+        int indice = 0;
+        for (int i = 0; i < this.base.size(); i++) {
+            if (this.base.get(i).getCodigo().equals(venta.getCodigo())) {
+                indice = i;
+            }
+        }
         return base.get(indice).getCantidad() * base.get(indice).getPrecio();
     }
 }
